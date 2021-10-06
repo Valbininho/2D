@@ -1,0 +1,33 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "f7e67cd4-f5ac-4911-b2ff-2446f7748633",
+            "actions": [
+                {
+                    "name": "Down1",
+                    "type": "Button",
+                    "id": "f0297599-3c9d-4bf1-99b9-6f94c6abd021",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dceb2ad3-0372-4d09-8346-24e13ba3d445",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

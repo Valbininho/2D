@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
-public class HP : MonoBehaviour
+public class Health_Counter : MonoBehaviour
 {
 
     [SerializeField] private float HealthPoint; /*sprite = <3 <3 <3*/

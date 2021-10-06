@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
+    int Hit;
 
-    [SerializeField] private float HealthPoint; /*sprite = <3 <3 <3*/
+    [SerializeField] private int HealthPoint; /*sprite = <3 <3 <3*/
     //anim 
     private Animator heartAnimator;
     private bool GetHit= false;
@@ -16,7 +17,7 @@ public class HP : MonoBehaviour
         heartAnimator = GetComponent<Animator>();
     }
 
-    private void Hit()
+    private void OnHit()
     {
         Hit = HealthPoint - 1;
     }

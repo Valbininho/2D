@@ -19,7 +19,7 @@ public class Start_button : MonoBehaviour
         var screen = Instantiate(ScreenToLoad);
         DontDestroyOnLoad(screen);
 
-        var chargement = SceneManager.LoadSceneAsync("LevelKirby");
+        var chargement = SceneManager.LoadSceneAsync("Niveau");
         chargement.allowSceneActivation = false;
 
         while (chargement.isDone == false)

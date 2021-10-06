@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
-public class HP : MonoBehaviour
+public class Health_Counter : MonoBehaviour
 {
 
     [SerializeField] private float HealthPoint; /*sprite = <3 <3 <3*/
@@ -18,7 +19,7 @@ public class HP : MonoBehaviour
 
     private void Hit()
     {
-        Hit = HealthPoint - 1;
+       // Hit = HealthPoint - 1;
     }
 
     private void OnCollisionEnter2D(/*Playercolider*/)

@@ -22,7 +22,7 @@ public class Health_Counter : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(Collision.CompareTag("Enemy"))
+        if(collision.CompareTag("Enemy"))
         {
             Loselife();
         }

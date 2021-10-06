@@ -15,11 +15,11 @@ public class @Controls : IInputActionCollection, IDisposable
     ""name"": ""Controls"",
     ""maps"": [
         {
-            ""name"": ""New action map"",
+            ""name"": ""Main"",
             ""id"": ""f7e67cd4-f5ac-4911-b2ff-2446f7748633"",
             ""actions"": [
                 {
-                    ""name"": ""New action1"",
+                    ""name"": ""Down1"",
                     ""type"": ""Button"",
                     ""id"": ""f0297599-3c9d-4bf1-99b9-6f94c6abd021"",
                     ""expectedControlType"": ""Button"",
@@ -35,7 +35,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action1"",
+                    ""action"": ""Down1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -44,9 +44,9 @@ public class @Controls : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // New action map
-        m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
-        m_Newactionmap_Newaction1 = m_Newactionmap.FindAction("New action1", throwIfNotFound: true);
+        // Main
+        m_Main = asset.FindActionMap("Main", throwIfNotFound: true);
+        m_Main_Down1 = m_Main.FindAction("Down1", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -93,40 +93,40 @@ public class @Controls : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // New action map
-    private readonly InputActionMap m_Newactionmap;
-    private INewactionmapActions m_NewactionmapActionsCallbackInterface;
-    private readonly InputAction m_Newactionmap_Newaction1;
-    public struct NewactionmapActions
+    // Main
+    private readonly InputActionMap m_Main;
+    private IMainActions m_MainActionsCallbackInterface;
+    private readonly InputAction m_Main_Down1;
+    public struct MainActions
     {
         private @Controls m_Wrapper;
-        public NewactionmapActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction1 => m_Wrapper.m_Newactionmap_Newaction1;
-        public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
+        public MainActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Down1 => m_Wrapper.m_Main_Down1;
+        public InputActionMap Get() { return m_Wrapper.m_Main; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(NewactionmapActions set) { return set.Get(); }
-        public void SetCallbacks(INewactionmapActions instance)
+        public static implicit operator InputActionMap(MainActions set) { return set.Get(); }
+        public void SetCallbacks(IMainActions instance)
         {
-            if (m_Wrapper.m_NewactionmapActionsCallbackInterface != null)
+            if (m_Wrapper.m_MainActionsCallbackInterface != null)
             {
-                @Newaction1.started -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnNewaction1;
-                @Newaction1.performed -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnNewaction1;
-                @Newaction1.canceled -= m_Wrapper.m_NewactionmapActionsCallbackInterface.OnNewaction1;
+                @Down1.started -= m_Wrapper.m_MainActionsCallbackInterface.OnDown1;
+                @Down1.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnDown1;
+                @Down1.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnDown1;
             }
-            m_Wrapper.m_NewactionmapActionsCallbackInterface = instance;
+            m_Wrapper.m_MainActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Newaction1.started += instance.OnNewaction1;
-                @Newaction1.performed += instance.OnNewaction1;
-                @Newaction1.canceled += instance.OnNewaction1;
+                @Down1.started += instance.OnDown1;
+                @Down1.performed += instance.OnDown1;
+                @Down1.canceled += instance.OnDown1;
             }
         }
     }
-    public NewactionmapActions @Newactionmap => new NewactionmapActions(this);
-    public interface INewactionmapActions
+    public MainActions @Main => new MainActions(this);
+    public interface IMainActions
     {
-        void OnNewaction1(InputAction.CallbackContext context);
+        void OnDown1(InputAction.CallbackContext context);
     }
 }

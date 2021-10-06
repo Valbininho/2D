@@ -2,11 +2,11 @@
     "name": "Controls",
     "maps": [
         {
-            "name": "New action map",
+            "name": "Main",
             "id": "f7e67cd4-f5ac-4911-b2ff-2446f7748633",
             "actions": [
                 {
-                    "name": "New action1",
+                    "name": "Down1",
                     "type": "Button",
                     "id": "f0297599-3c9d-4bf1-99b9-6f94c6abd021",
                     "expectedControlType": "Button",
@@ -22,7 +22,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action1",
+                    "action": "Down1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

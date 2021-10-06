@@ -12,21 +12,17 @@ public class Health_Counter : MonoBehaviour
 
     public void Loselife()
     {
-        livesRemaining--; //-1 au nombre de vies
-        lives[livesRemaining].enabled = false; // cache un coeur
-
+        if (/*Collider du joueur touche selui de l'enemi */)
+        {
+            livesRemaining--; //-1 au nombre de vies
+            lives[livesRemaining].enabled = false; // cache un coeur
+        }
         if(livesRemaining == 0) //si on a plus de vie on perd
         {
             Debug.Log("Game Over");
         }
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Loselife();
-        }
-    }
+
 }
 /* Notes
     [SerializeField] private float HealthPoint; /*sprite = <3 <3 <3

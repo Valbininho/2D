@@ -18,7 +18,7 @@ public class HP : MonoBehaviour
 
     private void Hit()
     {
-        Hit = HealthPoint - 1;
+       // Hit = HealthPoint - 1;
     }
 
     private void OnCollisionEnter2D(/*Playercolider*/)

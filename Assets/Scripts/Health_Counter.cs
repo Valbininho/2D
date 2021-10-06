@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Health_Counter : MonoBehaviour
 {
+    int Hit;
 
-    [SerializeField] private float HealthPoint; /*sprite = <3 <3 <3*/
+    [SerializeField] private int HealthPoint; /*sprite = <3 <3 <3*/
     //anim 
     private Animator heartAnimator;
     private bool GetHit= false;
@@ -17,7 +18,7 @@ public class Health_Counter : MonoBehaviour
         heartAnimator = GetComponent<Animator>();
     }
 
-    private void Hit()
+    private void OnHit()
     {
        // Hit = HealthPoint - 1;
     }

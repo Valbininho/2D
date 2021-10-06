@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: sol
+    uniqueID: 4225824145
+    locked: 0
+  - name: deco
+    uniqueID: 3345865913
+    locked: 0
+  - name: mur
+    uniqueID: 2585117451
+    locked: 0

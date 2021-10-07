@@ -6,7 +6,7 @@ using UnityEngine;
 public class Vilain : MonoBehaviour
 {
     public float speed;
-    private Transform target;
+    public Transform target;
 
     void Start()
     {
@@ -22,5 +22,4 @@ public class Vilain : MonoBehaviour
     {
         Debug.Log(col.gameObject.name);
     }
-
 }

@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-
+    public float hitTime = 2.5f;
     private bool vilain2;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         vilain2 = GetComponent<Vilain>();
         
     }
 
-    // Update is called once per frame
+
     void Update()
+    {
+        hitTime -= Time.deltaTime;
+
+        if (hitTime <= 0.0f)
+        {
+            timerEnded();
+        }
+    }
+
+
+    void timerEnded()
     {
         
     }

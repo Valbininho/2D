@@ -21,5 +21,12 @@ public class Vilain : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log(col.gameObject.name);
+
+        if (GameObject.Find("timerEnded").GetComponent<Timer>());
+        {
+
+         
+
+        }
     }
 }

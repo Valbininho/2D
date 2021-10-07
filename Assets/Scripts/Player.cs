@@ -10,12 +10,10 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     Vector2 dir;
     public Animator animator;
-    private SpriteRenderer mySpriteRenderer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
    
     void Update()
@@ -27,11 +25,27 @@ public class Player : MonoBehaviour
         animator.SetFloat("stickXpose", dir.x);
         animator.SetFloat("stickYpose", dir.y);
         animator.SetFloat("Speed", dir.sqrMagnitude);
+       // animator.SetTrigger("attack");
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            attack();
+        }
+
+        void attack()
+        {
+            animator.SetTrigger("attack");
+        }
     }
 
     public void onmov(InputAction.CallbackContext imput)
     {
         Debug.Log(imput.ReadValue<Vector2>());
     }
+
+    // public void onattack(InputAction.CallbackContext imput)
+    // {
+       // Debug.Log(imput.ReadValue<Vector2>());
+    // }
+
 }

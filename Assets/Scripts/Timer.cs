@@ -34,7 +34,6 @@ public class Timer : MonoBehaviour
 
     void timerEnded()
     {
-        if (timeHit == true)
-            if (
+
     }
 }

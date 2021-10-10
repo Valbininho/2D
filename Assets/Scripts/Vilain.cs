@@ -11,6 +11,7 @@ public class Vilain : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("Loselife()").GetComponent<Health_Counter>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
@@ -21,13 +22,14 @@ public class Vilain : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        damageGiven = true;
+
         Debug.Log(col.gameObject.name);
 
         if (GameObject.Find("timerEnded").GetComponent<Timer>());
         {
-
-         
-
+            if (damageGiven == true) ;
+                /*livesRemaining--;*/
         }
     }
 }

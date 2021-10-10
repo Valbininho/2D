@@ -13,8 +13,8 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-       /* vilain2 = GetComponent<Vilain>();*/
-        
+        /* vilain2 = GetComponent<Vilain>();*/
+        GameObject.Find("OnTriggerEnter2D(Collider2D col)").GetComponent<Vilain>() ;
     }
 
 
@@ -29,14 +29,12 @@ public class Timer : MonoBehaviour
             timerEnded();
         }
         if (hitTimer >= 0.0f);
-        {
-
-        }
     }
 
 
     void timerEnded()
     {
-        
+        if (timeHit == true)
+            if (
     }
 }

@@ -7,6 +7,7 @@ public class Vilain : MonoBehaviour
 {
     public float speed;
     public Transform target;
+    private bool damageGiven;
 
     void Start()
     {

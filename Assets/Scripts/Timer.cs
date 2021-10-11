@@ -4,30 +4,36 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float hitTime = 2.5f;
-    private bool vilain2;
+
+    [SerializeField] private float seconde;
+
+    public float hitTimer = 2.5f;
+    private bool timeHit;
 
 
     void Start()
     {
-        vilain2 = GetComponent<Vilain>();
-        
+        /* vilain2 = GetComponent<Vilain>();*/
+        GameObject.Find("OnTriggerEnter2D(Collider2D col)").GetComponent<Vilain>() ;
     }
 
 
     void Update()
     {
-        hitTime -= Time.deltaTime;
+        if (timeHit == false)
 
-        if (hitTime <= 0.0f)
+            hitTimer -= Time.deltaTime;
+
+        if (hitTimer <= 0.0f)
         {
             timerEnded();
         }
+        if (hitTimer >= 0.0f);
     }
 
 
     void timerEnded()
     {
-        
+
     }
 }
